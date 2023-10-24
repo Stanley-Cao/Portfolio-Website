@@ -1,0 +1,34 @@
+.experience_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.experience_container > div {
+    background: var(--color-bg-variant);
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent; 
+}
+
+.experience_container > div h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+.details{
+    display: flex;
+    gap: 1rem; 
+}
+
+.icon{
+    margin-top: 6px;
+    color: var(--color-primary);
+}

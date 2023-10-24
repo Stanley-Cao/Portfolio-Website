@@ -1,0 +1,46 @@
+.projects_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.projectItems{
+    background: var(--color-bg-variant);
+    padding: 1.3rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.projImage{
+    border-radius: 1.5rem;
+    overflow: hidden; 
+}
+
+.projectItems h3{
+    margin-top: 1.2rem;
+}
+
+.button{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/*Media*/
+
+@media screen and (max-width: 1024px){
+    .projects_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .projects_container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
