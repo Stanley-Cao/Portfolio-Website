@@ -11,13 +11,13 @@ import Contact from './components/Contact'
 const app = () => {
   return (
     <div>
-      <Router basename={"/"}>
+      <Router basename={"/portfolio"}>
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<About/>}/> 
-          <Route path="/Experience" exact element={<Experience/>}/>
-          <Route path="/Projects" exact element={<Projects/>}/>
-          <Route path="/Contact" exact element={<Contact/>}/>
+          <Route path="/portfolio" exact element={<About/>}/> 
+          <Route path="/portfolio/Experience" exact element={<Experience/>}/>
+          <Route path="/portfolio/Projects" exact element={<Projects/>}/>
+          <Route path="/portfolio/Contact" exact element={<Contact/>}/>
         </Routes>
       </Router>
     </div>
