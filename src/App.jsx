@@ -1,23 +1,22 @@
-import React from 'react'
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Navbar from './components/Navigation'
-import About from './components/About'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-
+import Navbar from './components/Navigation';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 
 const app = () => {
   return (
     <div>
-      <Router basename={"/portfolio"}>
+      <Router basename={"/"}>
         <Navbar />
         <Routes>
-          <Route path="/portfolio" exact element={<About/>}/> 
-          <Route path="/portfolio/Experience" exact element={<Experience/>}/>
-          <Route path="/portfolio/Projects" exact element={<Projects/>}/>
-          <Route path="/portfolio/Contact" exact element={<Contact/>}/>
+          <Route path="/" exact element={<About/>}/> 
+          <Route path="/Experience" exact element={<Experience/>}/>
+          <Route path="/Projects" exact element={<Projects/>}/>
+          <Route path="/Contact" exact element={<Contact/>}/>
         </Routes>
       </Router>
     </div>
