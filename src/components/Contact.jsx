@@ -3,8 +3,20 @@ import '../styles/contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {BsLinkedin} from 'react-icons/bs'
 import {FaGithub} from 'react-icons/fa'
+import emailjs from 'emailjs-com'
+import { useRef } from 'react'
 
-const contact = () => {
+const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_qcntcoo', 'template_ot7afjs', form.current, 'Ugd9O4zv8k37peZvN')
+    
+    e.target.reset()
+  };
+  
   return (
     <section id='contact'>
       <h5>Get In Touch</h5>
@@ -31,7 +43,7 @@ const contact = () => {
             <a href="https://www.linkedin.com/in/stanley-cao/" target="_blank">Let's Connect</a>
           </article>
         </div>
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <h3>New Message <br></br> Feek free to say hi. I am always looking to meet new people or chat about opportunities.</h3>
           <input type="test" name='name' placeholder='Your Full Name' required/>
           <input type="email" name='email' placeholder='Your Email' required/>
@@ -44,4 +56,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

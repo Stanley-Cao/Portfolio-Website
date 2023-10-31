@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import "../styles/navbar.css"
 import logo from '../resources/Jett.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 
 class Navbar extends Component{
     state = { clicked: false}
-
 
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked})
@@ -40,7 +42,7 @@ class Navbar extends Component{
                     <div style={{fontSize: 35}}>Stanley Cao</div>
                 </div>
                 <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+                    <FontAwesomeIcon icon={this.state.clicked ? faTimes : faBars} />
                 </div>
                 <div className="pages">
                 <ul className= {this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
