@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navigation'
 import About from './components/About'
 import Experience from './components/Experience'
@@ -11,10 +11,10 @@ import Contact from './components/Contact'
 const app = () => {
   return (
     <div>
-      <Router>
+      <Router basename={"/"}>
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<About/>}/> 
+          <Route path="" exact element={<About/>}/> 
           <Route path="/Experience" exact element={<Experience/>}/>
           <Route path="/Projects" exact element={<Projects/>}/>
           <Route path="/Contact" exact element={<Contact/>}/>
