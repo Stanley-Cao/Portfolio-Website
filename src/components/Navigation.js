@@ -16,9 +16,9 @@ const MobileNavbar = () => {
         <ul className="nav-items">
           <li className="nav-pages"><img className="jett" src={logo} style={{ width: 60, height: 55}} alt=""/></li>
           <li className="nav-pages"><a href="/">HOME</a></li>
-          <li className="nav-pages"><a href="/Experience">EXPERIENCES</a></li>
-          <li className="nav-pages"><a href="/Projects">PROJECTS</a></li>
-          <li className="nav-pages"><a href="/Contact">CONTACT</a></li>
+          <li className="nav-pages"><a href="/#/Experience">EXPERIENCES</a></li>
+          <li className="nav-pages"><a href="/#/Projects">PROJECTS</a></li>
+          <li className="nav-pages"><a href="/#/Contact">CONTACT</a></li>
         </ul>
       </div>
       <a href="#" className="toggle-button" onClick={() => setOpenNavbar(!openNavbar)}>
@@ -31,9 +31,9 @@ const MobileNavbar = () => {
         <div className="navbar-links-active">
           <ul className="nav-items">
             <li className="nav-pages"><a href="/">HOME</a></li>
-            <li className="nav-pages"><a href="/Experience">EXPERIENCES</a></li>
-            <li className="nav-pages"><a href="/Projects">PROJECTS</a></li>
-            <li className="nav-pages"><a href="/Contact">CONTACT</a></li>
+            <li className="nav-pages"><a href="/#/Experience">EXPERIENCES</a></li>
+            <li className="nav-pages"><a href="/#/Projects">PROJECTS</a></li>
+            <li className="nav-pages"><a href="/#/Contact">CONTACT</a></li>
           </ul>
         </div>
       )}
