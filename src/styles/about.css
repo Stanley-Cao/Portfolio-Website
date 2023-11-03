@@ -1,5 +1,5 @@
 header {
-    height: 115vh;
+    height: 150vh;
     padding-top: 6rem;
     overflow: hidden;
 }
@@ -17,7 +17,7 @@ header {
     margin-top: 2.5rem;
     display: flex;
     gap: 1.2rem;
-    position: absolute;
+    position: flex;
     justify-content: center;
     align-items: center;
     bottom: 30px;
@@ -48,12 +48,14 @@ header {
     background: linear-gradient(var(--color-primary), transparent);
     height: 30rem;
     width: 22rem;
-    position: absolute;
-    left: calc(50% - 11rem);
+    position: relative;
+    left: calc(50% - 11.5rem);
     margin-top: 1rem;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Media devices*/
@@ -66,12 +68,17 @@ header {
 
 @media screen and (max-width: 600px){
    header{
-    height: 140vh;
+    height: 170vh;
     padding-left: 15px;
     padding-right: 15px;
    }
 
    .socials{
     display: none; 
+   }
+   .avatar{
+    height:25rem;
+    width: 16rem;
+    left: calc(50% - 8rem);
    }
 }
